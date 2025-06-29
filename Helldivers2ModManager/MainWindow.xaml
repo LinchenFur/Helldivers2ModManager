@@ -64,7 +64,7 @@
 												Orientation="Horizontal">
 										<Image Source="../Resources/Images/logo.png"
 											   Stretch="UniformToFill"/>
-										<TextBlock Text="Mod Manager"
+										<TextBlock Text="模组管理器"
 												   FontSize="44"
 												   Foreground="White"/>
 										<TextBlock Text="{Binding Version}"

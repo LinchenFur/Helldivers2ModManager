@@ -23,7 +23,7 @@ namespace Installer
 					new Dir(
 						@"%ProgramFiles%\Helldivers2ModManager",
 						new Files(
-							$@"{rootDir}\Helldivers2ModManager\bin\Release\net8.0-windows\*.*",
+							$@"{rootDir}\Helldivers2ModManager\bin\Debug\net8.0-windows\*.*",
 							f => f.EndsWith(".exe") || f.EndsWith(".dll") || f.EndsWith(".json")
 						)
 					),

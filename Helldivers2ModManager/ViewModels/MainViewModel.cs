@@ -7,7 +7,7 @@ namespace Helldivers2ModManager.ViewModels;
 
 internal sealed partial class MainViewModel : ObservableObject
 {
-	public string Title => $"HD2 Mod Manager {Version} - {CurrentViewModel.Title}";
+	public string Title => $"地狱潜兵2模组管理器 {Version} - {CurrentViewModel.Title}";
 
 	public PageViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 

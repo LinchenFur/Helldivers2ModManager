@@ -193,7 +193,7 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 		WeakReferenceMessenger.Default.Send(new MessageBoxProgressMessage()
 		{
 			Title = "Saving mod configuration",
-			Message = "Please wait democratically."
+			Message = "请民主的等待"
 		});
 
 		var enabledFile = new FileInfo(Path.Combine(_settingsStore.StorageDirectory, "enabled.json"));
@@ -248,15 +248,15 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 			InitialDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Download"),
 			Filter = "Archive|*.rar;*.7z;*.zip;*.tar",
 			Multiselect = false,
-			Title = "Please select a mod archive to add..."
+			Title = "请选择一个模组文件..."
 		};
 
 		if (dialog.ShowDialog() ?? false)
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxProgressMessage()
 			{
-				Title = "Adding Mod",
-				Message = "Please wait democratically."
+				Title = "添加模组ing...",
+				Message = "请民主的等待"
 			});
 			try
 			{
@@ -322,15 +322,15 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxErrorMessage()
 			{
-				Message = "Unable to purge! Helldivers 2 Path not set. Please go to settings."
+				Message = "无法清除！Helldivers 2 路径未设置.请前往设置."
 			});
 			return;
 		}
 
 		WeakReferenceMessenger.Default.Send(new MessageBoxProgressMessage()
 		{
-			Title = "Purging Mods",
-			Message = "Please wait democratically."
+			Title = "清理模组ing...",
+			Message = "请民主的等待"
 		});
 
 		await _modStore.PurgeAsync();
@@ -345,7 +345,7 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxErrorMessage()
 			{
-				Message = "Unable to deploy! Helldivers 2 Path not set. Please go to settings."
+				Message = "无法安装！Helldivers 2 路径未设置.请前往设置."
 			});
 			return;
 		}
@@ -353,7 +353,7 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 		WeakReferenceMessenger.Default.Send(new MessageBoxProgressMessage()
 		{
 			Title = "Deploying Mods",
-			Message = "Please wait democratically."
+			Message = "请民主的等待."
 		});
 
 		var mods = _mods.Where(static vm => vm.Enabled).ToArray();

@@ -153,7 +153,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxErrorMessage()
 			{
-				Message = "Game directory can not be left empty!"
+				Message = "游戏目录不能留空！"
 			});
 			return false;
 		}
@@ -162,7 +162,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxErrorMessage()
 			{
-				Message = "Storage directory can not be left empty!"
+				Message = "存储目录不能留空！"
 			});
 			return false;
 		}
@@ -171,7 +171,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		{
 			WeakReferenceMessenger.Default.Send(new MessageBoxErrorMessage()
 			{
-				Message = "Temporary directory can not be left empty!"
+				Message = "临时目录不能留空！"
 			});
 			return false;
 		}
@@ -211,8 +211,8 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 	{
 		WeakReferenceMessenger.Default.Send(new MessageBoxConfirmMessage
 		{
-			Title = "Reset?",
-			Message = "Do you really want to reset your settings?",
+			Title = "重置?",
+			Message = "您真的要重置您的设置吗？",
 			Confirm = () =>
 			{
 				_settingsStore.Reset();
@@ -231,7 +231,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		var dialog = new OpenFolderDialog
 		{
 			Multiselect = false,
-			Title = "Please select you Helldivers 2 folder..."
+			Title = "请选择你的游戏目录"
 		};
 
 		if (dialog.ShowDialog() ?? false)
@@ -260,7 +260,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		{
 			Multiselect = false,
 			ValidateNames = true,
-			Title = "Please select a folder where you want this manager to store its mods..."
+			Title = "请选择一个你希望这个管理器存储其模块的文件夹..."
 		};
 
 		if (dialog.ShowDialog() ?? false)
@@ -274,7 +274,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		{
 			Multiselect = false,
 			ValidateNames = true,
-			Title = "Please select a folder which you want this manager to use for temporary files..."
+			Title = "请选择此管理器的临时文件夹..."
 		};
 
 		if (dialog.ShowDialog() ?? false)
@@ -310,7 +310,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		WeakReferenceMessenger.Default.Send(new MessageBoxInputMessage
 		{
 			Title = "File name?",
-			Message = "Please enter the 16 character name of an archive file you want to skip patch 0 for.",
+			Message = "请输入要跳过补丁 0 的存档文件的 16 个字符的名称",
 			MaxLength = 16,
 			Confirm = (str) =>
 			{
@@ -341,8 +341,8 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 	{
 		WeakReferenceMessenger.Default.Send(new MessageBoxProgressMessage
 		{
-			Title = "Looking for game",
-			Message = "Please wait democratically."
+			Title = "寻找游戏",
+			Message = "请民主的等待"
 		});
 
 		var (result, path) = await Task.Run<(bool, string?)>(static () =>
@@ -374,7 +374,7 @@ internal sealed partial class SettingsPageViewModel : PageViewModelBase
 		else
 			WeakReferenceMessenger.Default.Send(new MessageBoxInfoMessage
 			{
-				Message = "Your Helldivers 2 game could not be found automatically. Please set it manually."
+				Message = "“无法自动找到您的 Helldivers 2 游戏.请手动设置"
 			});
 	}
 }

@@ -32,13 +32,13 @@
 			<StackPanel Margin="3">
 				<TextBlock FontSize="24"
 						   Foreground="White"
-						   Text="Game Directory"/>
+						   Text="游戏目录"/>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray">
-					This is the games directory where you want the mods to be installed.
+					这是您希望安装 Mod 的游戏目录。
 					<LineBreak/>
-					(Clicking "..." will prompt you to select the games directory)
+					（点击“...”将提示您选择游戏目录）
 				</TextBlock>
 				<Grid>
 					<Grid.ColumnDefinitions>
@@ -51,7 +51,7 @@
 							 FontSize="18"
 							 VerticalAlignment="Center"/>
 					<Button Grid.Column="1"
-							Content="Auto detect"
+							Content="自动搜索"
 							Command="{Binding DetectGameCommand}"/>
 					<Button Grid.Column="2"
 							Content="..."
@@ -60,16 +60,16 @@
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Storage Directory"/>
+						   Text="存储目录"/>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray">
-					This is where files about all the managed mods are stored.
+					这是存储所有 Mod 文件的地方。
 				</TextBlock>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="Red">
-					Purge before changing this as a record of the installed files is stored in this!
+					在更改此文件夹之前清除，因为已安装文件的记录存储在此文件夹中！
 				</TextBlock>
 				<Grid>
 					<Grid.ColumnDefinitions>
@@ -87,17 +87,17 @@
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Temporary Directory"/>
+						   Text="临时目录"/>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray">
-					This is the directory where all temporary files will be stored. Examples are:
+					这是将存储所有临时文件的目录。示例包括：
 					<LineBreak/>
-					- Download files
+					- 下载文件
 					<LineBreak/>
-					- Staging files
+					- 临时文件
 					<LineBreak/>
-					- Decompressed files
+					- 解压缩的文件
 				</TextBlock>
 				<Grid>
 					<Grid.ColumnDefinitions>
@@ -115,11 +115,11 @@
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Opacity"/>
+						   Text="不透明度"/>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray">
-					Change the opacity of the window background.
+					改变背景不透明度.
 				</TextBlock>
 				<Slider HorizontalAlignment="Left"
 						Width="200"
@@ -132,14 +132,14 @@
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Log Level"/>
+						   Text="日志等级"/>
 				<TextBlock FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray">
-					This sets the level of messages which should be logged to the log file.
-					The option set and anything below it will be captured an logged.
+					这将设置应记录到日志文件中的消息的级别.
+					选项 set 及其下面的任何内容都将被捕获并记录。
 					<LineBreak/>
-					By default only warnings and anything more severe will be logged.
+					默认情况下，只会记录 warnings 和任何更严重的内容。
 				</TextBlock>
 				<ComboBox HorizontalAlignment="Left"
 						  ItemsSource="{Binding Source={StaticResource LogLevelEnumData}}"
@@ -147,7 +147,7 @@
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Search"/>
+						   Text="搜索"/>
 				<Grid>
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="Auto"/>
@@ -168,14 +168,14 @@
 							   FontSize="12"
 							   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 							   Foreground="DarkGray"
-							   Text="Case Sensitive"
+							   Text="区分大小写"
 							   VerticalAlignment="Center"/>
 				</Grid>
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Utilities"/>
-				<Button Content="Reset"
+						   Text="应用程序"/>
+				<Button Content="重置"
 						Style="{DynamicResource CancelButton}"
 						Command="{Binding ResetCommand}"
 						HorizontalAlignment="Left"/>
@@ -184,23 +184,23 @@
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray"
 						   Margin="0 0 0 5">
-					This will this will reset all the setting to their default values!
+					这会将所有设置重置为默认值！
 				</TextBlock>
 				<TextBlock FontSize="24"
 						   Foreground="White"
 						   Margin="0 10 0 0"
-						   Text="Dev Options"
+						   Text="开发选项"
 						   TextDecorations="Underline"/>
 				<TextBlock FontSize="18"
 						   Foreground="White"
 						   Margin="0 5 0 0"
-						   Text="Skip List"/>
+						   Text="跳过列表"/>
 				<TextBlock Grid.Column="0"
 						   FontSize="12"
 						   FontFamily="..\Resources\Fonts\#FS Sinclair Regular"
 						   Foreground="DarkGray"
 						   Margin="0 0 0 5">
-					This skips the 0th index of all specified files during deployment.
+					这将在部署期间跳过所有指定文件的第 0 个索引.
 				</TextBlock>
 				<ListBox Width="300"
 						 MinHeight="50"
@@ -237,7 +237,7 @@
 			</StackPanel>
 		</ScrollViewer>
 		<Grid Grid.Row="1">
-			<Button Content="OK"
+			<Button Content="确认"
 					Command="{Binding OkCommand}"
 					HorizontalAlignment="Right"/>
 		</Grid>

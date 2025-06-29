@@ -57,7 +57,7 @@
 					Click="CancelButton_Click"/>
 			<Button Grid.Row="2"
 					x:Name="okButton"
-					Content="OK"
+					Content="确认"
 					HorizontalAlignment="Right"
 					Click="OkButton_Click"/>
 			<Grid Grid.Row="2"
