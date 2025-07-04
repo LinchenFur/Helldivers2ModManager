@@ -76,7 +76,7 @@ namespace Helldivers2ModManager.Components
 		{
 			Reset();
 
-			title.Text = "Info";
+			title.Text = "信息";
 			this.message.Text = message.Message;
 
 			okButton.Visibility = Visibility.Visible;
@@ -87,7 +87,7 @@ namespace Helldivers2ModManager.Components
 		{
 			Reset();
 
-			title.Text = "Warning";
+			title.Text = "警告";
 			brush.Color = Colors.Yellow;
 			this.message.Text = message.Message;
 
@@ -99,7 +99,7 @@ namespace Helldivers2ModManager.Components
 		{
 			Reset();
 
-			title.Text = "Error";
+			title.Text = "错误";
 			brush.Color = Colors.Red;
 			this.message.Text = message.Message;
 

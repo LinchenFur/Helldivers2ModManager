@@ -367,7 +367,7 @@ internal sealed partial class DashboardPageViewModel : PageViewModelBase
 
 			WeakReferenceMessenger.Default.Send(new MessageBoxInfoMessage()
 			{
-				Message = "Deployment successful."
+				Message = "安装成功."
 			});
 		}
 		catch(DeployException ex)
